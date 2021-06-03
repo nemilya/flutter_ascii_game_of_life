@@ -6,6 +6,11 @@ Created by command:
 
     flutter create --platforms web flutter_ascii_game_of_life
 
+Start:
+
+    $ cd flutter_ascii_game_of_life
+    $ flutter run
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
