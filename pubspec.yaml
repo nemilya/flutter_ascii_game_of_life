@@ -1,5 +1,5 @@
 name: flutter_ascii_game_of_life
-description: A new Flutter project.
+description: Flutter ASCII Game Of Life
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -23,15 +23,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  game_life_dart:
+    git:
+      url: git://github.com/nemilya/game_life_dart.git
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+# commented because of collision with version test in game_life_dart package (TODO)
+#  flutter_test:
+#    sdk: flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -74,3 +77,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: RobotoMono
+      fonts:
+        - asset: fonts/RobotoMono-Bold.ttf
+

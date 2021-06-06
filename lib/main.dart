@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:game_life_dart/game_life.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter ASCII Game Of Life',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter ASCII Game Of Life'),
     );
   }
 }
@@ -40,6 +41,7 @@ class MyHomePage extends StatefulWidget {
   // always marked "final".
 
   final String title;
+  GameLife gameLife = new GameLife();
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -47,6 +49,21 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String ascii = '';
+
+  @override
+  void initState() {
+    widget.gameLife.setWorld(
+"...*...\n"
+"...*...\n"
+"...*...\n"
+"...*...\n"
+"...*...\n"
+"...*..."
+);
+    ascii = widget.gameLife.getWorldAsAscii();
+    super.initState();
+  }
 
   void _incrementCounter() {
     setState(() {
@@ -56,6 +73,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
+      widget.gameLife.step();
+      ascii = widget.gameLife.getWorldAsAscii();
     });
   }
 
@@ -94,11 +113,9 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              ascii
+              ,
+              style: TextStyle(fontFamily: 'RobotoMono', fontSize: 30),
             ),
           ],
         ),
