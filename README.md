@@ -11,6 +11,8 @@ Start:
     $ cd flutter_ascii_game_of_life
     $ flutter run
 
+Fonts: https://fonts.google.com/specimen/Roboto+Mono
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
