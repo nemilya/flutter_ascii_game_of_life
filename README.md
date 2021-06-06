@@ -1,27 +1,23 @@
-# flutter_ascii_game_of_life
+# Flutter ASCII Game Of Life
 
-A new Flutter project.
+Example of Flutter as a Container for pure Dart ascii game (Game Of Life).
 
-Created by command:
+Ascii game class source: `https://github.com/nemilya/game_life_dart/`
+
+Flutter project was created by command (web platform):
 
     flutter create --platforms web flutter_ascii_game_of_life
+
+Added monospace font (from `https://fonts.google.com/specimen/Roboto+Mono`)
+
+Small fixes to include class (todo: link to commit).
 
 Start:
 
     $ cd flutter_ascii_game_of_life
     $ flutter run
 
-Fonts: https://fonts.google.com/specimen/Roboto+Mono
+## Screenshot
 
-## Getting Started
+![Flutter ASCII Game Of Life (web)](flutter_ascii_game_of_life_screenshot.jpg)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
