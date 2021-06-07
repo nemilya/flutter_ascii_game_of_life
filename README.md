@@ -2,7 +2,7 @@
 
 Example of Flutter as a Container for pure Dart ascii game (Game Of Life).
 
-Ascii game class source: `https://github.com/nemilya/game_life_dart/`
+Ascii game [class source](https://github.com/nemilya/game_life_dart/)
 
 Flutter project was created by command (web platform):
 
