@@ -17,7 +17,17 @@ Start:
     $ cd flutter_ascii_game_of_life
     $ flutter run
 
+Build web:
+
+    $ flutter build web
+
+Deploy: copy `build/web/*` to web-server.
+
 ## Screenshot
 
 ![Flutter ASCII Game Of Life (web)](flutter_ascii_game_of_life_screenshot.jpg)
+
+## Demo
+
+[Demo Flutter ASCII Game Of Life (web)](https://nemilya.github.io/flutter_ascii_game_of_life/)
 
